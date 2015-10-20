@@ -1,0 +1,46 @@
+# 
+# /etc/fstab: static file system information
+#
+# <file system>	<dir>	<type>	<options>	<dump>	<pass>
+
+# /dev/sda7
+UUID=bfdfccab-d9ab-48d6-b484-3e8b7e5a467e	/         	btrfs     	rw,relatime,space_cache,subvolid=5,subvol=/	0 0
+
+# efivarfs
+efivarfs      			         	/sys/firmware/efi/efivars	efivarfs  	rw,nosuid,nodev,noexec,relatime	0 0
+
+# /boot/efi
+UUID=4A99-B78F                                  /boot/efi       auto            ro              0 1
+/boot/efi                                       /mnt/gentoo/boot/efi    auto    ro,bind         0 0
+
+# /dev/sda4 LABEL=Arch
+UUID=0413d11d-1587-4f91-9680-3382c46078a3	/mnt/arch 	ext4      	ro,relatime,data=ordered	0 2
+
+# /dev/sda3 LABEL=Home
+UUID=91f6e164-9e1d-454c-9d3d-f2c40a571de9	/mnt/home 	ext4      	rw,relatime,data=ordered	0 1
+
+# /dev/sda8
+UUID=fc4ce08c-25df-4c06-93bb-00a063ce8d17	none      	swap      	defaults  	0 0
+
+
+# /mnt/gentoo
+UUID=89585f20-a68d-4ca3-b769-2b97260fd166               /mnt/gentoo             auto            relatime,ro,ssd 0 1
+
+# /mnt/gentoo/mnt/gentoo
+UUID=32432eec-7a33-4766-b644-661706d9171f               /mnt/gentoo/mnt/gentoo  auto            relatime,ro     0 1
+
+# /mnt/gentoo/boot
+UUID=2b065fe8-b04f-4c89-b903-86d20a2f87e4               /mnt/gentoo/boot        auto            relatime,ro     0 1
+
+# Portage
+UUID=ed6a73ba-7b95-4654-9d82-c235f683d7d0               /mnt/gentoo/usr/portage reiserfs        rw,noatime      0 2
+
+# Data
+UUID=d08814c3-2f2c-403a-82a4-98957ca8d58b               /mnt/data       auto            defaults        0 2
+
+# MyCloud
+//10.0.0.51/Mark                	                /bkup           cifs            rw,uid=1000,credentials=/home/mark/mywdcloud.cred,users,user,noauto     0 0
+
+# Recovery OS
+UUID=b029bfaa-5495-4c4b-9e69-9709a8338984               /mnt/recover    auto            noauto,ro,relatime,user 1 1
+
