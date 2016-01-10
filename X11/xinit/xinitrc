@@ -12,7 +12,12 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
 fi
 
 # Here Xfce is kept as default
-session=${1:-openbox}
+if [[ "x$XSESSION" == "x" ]]
+then
+    session=${1:-openbox}
+else
+    session=$XSESSION
+fi
 
 case $session in
     awesome           ) exec awesome;;

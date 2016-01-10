@@ -8,15 +8,15 @@
 #AUTOSAVEBACKUPFILE=0
 #DEVELSRCDIR=""
 #DEVEL=0
-#VISUAL="$VISUAL"
-#EDITOR="$EDITOR"
+VISUAL="$VISUAL"
+EDITOR="$EDITOR"
 #FORCEENGLISH=0
 #FORCE=0
 #TMPDIR="/tmp"
 #NO_TESTDB=0
 
 # SUDO
-#SUDONOVERIF=0      # Avoid multiple sudo checks when timestamp_timeout=0
+SUDONOVERIF=0      # Avoid multiple sudo checks when timestamp_timeout=0
 #SUDOREDIRECT=1     # Define to 0 in case you use a fingerprint device
 
 # ABS
@@ -35,7 +35,7 @@
 #AURUSEGIT=0
 
 # Build
-#EXPORT=0           # Export to 1: EXPORTDIR or PKGDEST
+EXPORT=2           # Export to 1: EXPORTDIR or PKGDEST
                     # 2: pacman cache (as root)
 #EXPORTSRC=0        # Need EXPORT>0 to be used
 #EXPORTDIR=""       # If empty, use makepkg's connfiguration (see makepkg.conf)

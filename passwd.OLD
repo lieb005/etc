@@ -17,8 +17,16 @@ systemd-journal-remote:x:998:998:systemd Journal Remote:/:/sbin/nologin
 avahi:x:84:84:avahi:/:/bin/nologin
 polkitd:x:102:102:Policy Kit Daemon:/:/usr/bin/nologin
 rtkit:x:133:133:RealtimeKit:/proc:/bin/false
-sddm:x:997:997:Simple Desktop Display Manager:/var/lib/sddm:/usr/bin/nologin
-mark:x:1000:1000::/home/mark:/bin/bash
+mark:x:1000:1000::/home/mark:/bin/zsh
 lightdm:x:620:620:Light Display Manager:/var/lib/lightdm:/usr/bin/nologin
 colord:x:124:124::/var/lib/colord:/bin/false
 git:x:619:619:git daemon user:/:/bin/bash
+rpc:x:32:32:Rpcbind Daemon:/dev/null:/bin/false
+usbmux:x:140:140:usbmux user:/:/sbin/nologin
+ntp:x:87:87:Network Time Protocol:/var/lib/ntp:/bin/false
+nm-openvpn:x:618:618:NetworkManager OpenVPN:/:/usr/bin/nologin
+nm-openconnect:x:104:104:NetworkManager user for OpenConnect:/:/sbin/nologin
+mysql:x:89:89::/var/lib/mysql:/bin/false
+chrony:x:183:183:Network Time Protocol:/var/lib/chrony:/bin/false
+dnsmasq:x:617:617:dnsmasq daemon:/:/usr/bin/nologin
+renoh:x:1001:1001::/srv/renoh:/bin/bash

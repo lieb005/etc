@@ -28,16 +28,8 @@
 Cmnd_Alias	PROCESSES = /usr/bin/nice, /bin/kill, /usr/bin/renice, \
 			    /usr/bin/pkill, /usr/bin/top
 
-Cmnd_Alias	MISC = /usr/bin/macchanger, /usr/bin/ifconfig
-
-##
-## Defaults specification
-##
-## You may wish to keep some of the following environment variables
-## when running commands via sudo.
-##
-## Locale settings
-Defaults env_keep += "LANG LANGUAGE LINGUAS LC_* _XKB_CHARSET"
+Cmnd_Alias	MISC = /usr/bin/macchanger, /usr/bin/ifconfig, /usr/bin/nm-applet
+Cmnd_Alias	POWER = /usr/bin/systemctl
 ##
 ## Run X applications through sudo; HOME is used to find the
 ## .Xauthority file.  Note that other programs use HOME to find   
@@ -84,7 +76,7 @@ Defaults insults
 root ALL=(ALL) ALL
 
 ## Uncomment to allow members of group wheel to execute any command
-%wheel ALL=(ALL) ALL, NOPASSWD: MISC, PROCESSES
+%wheel ALL=(ALL) ALL, NOPASSWD: MISC, PROCESSES, POWER
 
 ## Same thing without a password
 # %wheel ALL=(ALL) NOPASSWD: ALL

@@ -18,7 +18,7 @@ locate:x:21:mark
 rfkill:x:24:
 smmsp:x:25:
 proc:x:26:polkitd
-http:x:33:
+http:x:33:mark
 games:x:50:mark
 lock:x:54:mark
 uuidd:x:68:
@@ -45,7 +45,6 @@ systemd-journal-remote:x:998:
 avahi:x:84:
 polkitd:x:102:
 rtkit:x:133:
-sddm:x:997:
 mark:x:1000:
 lightdm:x:620:
 colord:x:124:
@@ -57,3 +56,8 @@ nm-openvpn:x:618:
 nm-openconnect:x:104:
 mysql:x:89:
 chrony:x:183:
+dnsmasq:x:617:
+renoh:x:1001:
+tor:x:43:
+stunnel:x:16:
+music:x:1003:

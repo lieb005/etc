@@ -1,6 +1,23 @@
 <?xml version="1.0"?>
 <gconf>
 	<dir name="system">
+		<dir name="gstreamer">
+			<dir name="0.10">
+				<dir name="default">
+					<entry name="visualization" mtime="1446589642" schema="/schemas/system/gstreamer/0.10/default/visualization"/>
+					<entry name="videosrc" mtime="1446589642" schema="/schemas/system/gstreamer/0.10/default/videosrc"/>
+					<entry name="audiosrc_description" mtime="1446589642" schema="/schemas/system/gstreamer/0.10/default/audiosrc_description"/>
+					<entry name="audiosrc" mtime="1446589642" schema="/schemas/system/gstreamer/0.10/default/audiosrc"/>
+					<entry name="videosink" mtime="1446589642" schema="/schemas/system/gstreamer/0.10/default/videosink"/>
+					<entry name="chataudiosink_description" mtime="1446589642" schema="/schemas/system/gstreamer/0.10/default/chataudiosink_description"/>
+					<entry name="chataudiosink" mtime="1446589642" schema="/schemas/system/gstreamer/0.10/default/chataudiosink"/>
+					<entry name="musicaudiosink_description" mtime="1446589642" schema="/schemas/system/gstreamer/0.10/default/musicaudiosink_description"/>
+					<entry name="musicaudiosink" mtime="1446589642" schema="/schemas/system/gstreamer/0.10/default/musicaudiosink"/>
+					<entry name="audiosink_description" mtime="1446589642" schema="/schemas/system/gstreamer/0.10/default/audiosink_description"/>
+					<entry name="audiosink" mtime="1446589642" schema="/schemas/system/gstreamer/0.10/default/audiosink"/>
+				</dir>
+			</dir>
+		</dir>
 		<dir name="smb">
 			<entry name="workgroup" mtime="1445313153" schema="/schemas/system/smb/workgroup"/>
 		</dir>
@@ -248,8 +265,102 @@
 	</dir>
 	<dir name="schemas">
 		<dir name="system">
+			<dir name="gstreamer">
+				<dir name="0.10">
+					<dir name="default">
+						<entry name="visualization" mtime="1446589642" type="schema" stype="string" owner="gstreamer">
+							<local_schema locale="C" short_desc="default GStreamer visualization plugin">
+								<default type="string">
+									<stringvalue>goom</stringvalue>
+								</default>
+								<longdesc>GStreamer can put visualization plugins in a pipeline to transform audio stream in video frames. Default is goom but more visualization plugins will be ported soon. The visualization plugin can be a partial pipeline instead of just one element.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="videosrc" mtime="1446589642" type="schema" stype="string" owner="gstreamer">
+							<local_schema locale="C" short_desc="default GStreamer video source">
+								<default type="string">
+									<stringvalue>v4l2src</stringvalue>
+								</default>
+								<longdesc>GStreamer can record video from any number of input elements.  Some possible choices are v4lsrc and videotestsrc. The video source can be a partial pipeline instead of just one element.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="audiosrc_description" mtime="1446589642" type="schema" stype="string" owner="gstreamer">
+							<local_schema locale="C" short_desc="description for default GStreamer audiosrc">
+								<default type="string">
+									<stringvalue>Default</stringvalue>
+								</default>
+								<longdesc>Describes the selected input element.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="audiosrc" mtime="1446589642" type="schema" stype="string" owner="gstreamer">
+							<local_schema locale="C" short_desc="default GStreamer audio source">
+								<default type="string">
+									<stringvalue>alsasrc</stringvalue>
+								</default>
+								<longdesc>GStreamer can record audio using any number of input elements.  Some possible choices are osssrc, esdsrc and alsasrc.  The audio source can be a partial pipeline instead of just one element.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="videosink" mtime="1446589642" type="schema" stype="string" owner="gstreamer">
+							<local_schema locale="C" short_desc="default GStreamer videosink">
+								<default type="string">
+									<stringvalue>autovideosink</stringvalue>
+								</default>
+								<longdesc>GStreamer can play video using any number of output elements.  Some possible choices are xvimagesink, ximagesink, sdlvideosink and aasink.  The videosink can be a partial pipeline instead of just one element.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="chataudiosink_description" mtime="1446589642" type="schema" stype="string" owner="gstreamer">
+							<local_schema locale="C" short_desc="description for GStreamer audiosink for Audio/Video Conferencing">
+								<default type="string">
+									<stringvalue>Default</stringvalue>
+								</default>
+								<longdesc>Describes the selected output element for Audio/Video Conferencing.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="chataudiosink" mtime="1446589642" type="schema" stype="string" owner="gstreamer">
+							<local_schema locale="C" short_desc="GStreamer audiosink for Audio/Video Conferencing">
+								<default type="string">
+									<stringvalue>autoaudiosink</stringvalue>
+								</default>
+								<longdesc>GStreamer can play audio using any number of output elements.  Some possible choices are osssink, esdsink and alsasink.  The audiosink can be a partial pipeline instead of just one element.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="musicaudiosink_description" mtime="1446589642" type="schema" stype="string" owner="gstreamer">
+							<local_schema locale="C" short_desc="description for GStreamer audiosink for Music and Movies">
+								<default type="string">
+									<stringvalue>Default</stringvalue>
+								</default>
+								<longdesc>Describes the selected output element for Music and Movies.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="musicaudiosink" mtime="1446589642" type="schema" stype="string" owner="gstreamer">
+							<local_schema locale="C" short_desc="GStreamer audiosink for Music and Movies">
+								<default type="string">
+									<stringvalue>autoaudiosink</stringvalue>
+								</default>
+								<longdesc>GStreamer can play audio using any number of output elements.  Some possible choices are osssink, esdsink and alsasink.  The audiosink can be a partial pipeline instead of just one element.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="audiosink_description" mtime="1446589642" type="schema" stype="string" owner="gstreamer">
+							<local_schema locale="C" short_desc="description for default GStreamer audiosink">
+								<default type="string">
+									<stringvalue>Default</stringvalue>
+								</default>
+								<longdesc>Describes the selected output element.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="audiosink" mtime="1446589642" type="schema" stype="string" owner="gstreamer">
+							<local_schema locale="C" short_desc="default GStreamer audiosink">
+								<default type="string">
+									<stringvalue>autoaudiosink</stringvalue>
+								</default>
+								<longdesc>GStreamer can play audio using any number of output elements.  Some possible choices are osssink, esdsink and alsasink.  The audiosink can be a partial pipeline instead of just one element.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
 			<dir name="smb">
-				<entry name="workgroup" mtime="1445313153" type="schema" stype="string" owner="gnome-vfs" gettext_domain="gnome-vfs-2.0">
+				<entry name="workgroup" mtime="1445313153" type="schema" stype="string" owner="gnome-vfs">
 					<local_schema locale="C" short_desc="SMB workgroup">
 						<default type="string">
 							<stringvalue></stringvalue>
@@ -261,7 +372,7 @@
 				</entry>
 			</dir>
 			<dir name="proxy">
-				<entry name="autoconfig_url" mtime="1445313153" type="schema" stype="string" owner="gnome-vfs" gettext_domain="gnome-vfs-2.0">
+				<entry name="autoconfig_url" mtime="1445313153" type="schema" stype="string" owner="gnome-vfs">
 					<local_schema locale="C" short_desc="Automatic proxy configuration URL">
 						<default type="string">
 							<stringvalue></stringvalue>
@@ -269,14 +380,14 @@
 						<longdesc>URL that provides proxy configuration values.</longdesc>
 					</local_schema>
 				</entry>
-				<entry name="socks_port" mtime="1445313153" type="schema" stype="int" owner="gnome-vfs" gettext_domain="gnome-vfs-2.0">
+				<entry name="socks_port" mtime="1445313153" type="schema" stype="int" owner="gnome-vfs">
 					<local_schema locale="C" short_desc="SOCKS proxy port">
 						<default type="int" value="0"/>
 						<longdesc>The port on the machine defined by &quot;/system/proxy/socks_host&quot;
         that you proxy through.</longdesc>
 					</local_schema>
 				</entry>
-				<entry name="socks_host" mtime="1445313153" type="schema" stype="string" owner="gnome-vfs" gettext_domain="gnome-vfs-2.0">
+				<entry name="socks_host" mtime="1445313153" type="schema" stype="string" owner="gnome-vfs">
 					<local_schema locale="C" short_desc="SOCKS proxy host name">
 						<default type="string">
 							<stringvalue></stringvalue>
@@ -284,14 +395,14 @@
 						<longdesc>The machine name to proxy socks through.</longdesc>
 					</local_schema>
 				</entry>
-				<entry name="ftp_port" mtime="1445313153" type="schema" stype="int" owner="gnome-vfs" gettext_domain="gnome-vfs-2.0">
+				<entry name="ftp_port" mtime="1445313153" type="schema" stype="int" owner="gnome-vfs">
 					<local_schema locale="C" short_desc="FTP proxy port">
 						<default type="int" value="0"/>
 						<longdesc>The port on the machine defined by &quot;/system/proxy/ftp_host&quot;
         that you proxy through.</longdesc>
 					</local_schema>
 				</entry>
-				<entry name="ftp_host" mtime="1445313153" type="schema" stype="string" owner="gnome-vfs" gettext_domain="gnome-vfs-2.0">
+				<entry name="ftp_host" mtime="1445313153" type="schema" stype="string" owner="gnome-vfs">
 					<local_schema locale="C" short_desc="FTP proxy host name">
 						<default type="string">
 							<stringvalue></stringvalue>
@@ -299,14 +410,14 @@
 						<longdesc>The machine name to proxy FTP through.</longdesc>
 					</local_schema>
 				</entry>
-				<entry name="secure_port" mtime="1445313153" type="schema" stype="int" owner="gnome-vfs" gettext_domain="gnome-vfs-2.0">
+				<entry name="secure_port" mtime="1445313153" type="schema" stype="int" owner="gnome-vfs">
 					<local_schema locale="C" short_desc="Secure HTTP proxy port">
 						<default type="int" value="0"/>
 						<longdesc>The port on the machine defined by &quot;/system/proxy/secure_host&quot;
         that you proxy through.</longdesc>
 					</local_schema>
 				</entry>
-				<entry name="secure_host" mtime="1445313153" type="schema" stype="string" owner="gnome-vfs" gettext_domain="gnome-vfs-2.0">
+				<entry name="secure_host" mtime="1445313153" type="schema" stype="string" owner="gnome-vfs">
 					<local_schema locale="C" short_desc="Secure HTTP proxy host name">
 						<default type="string">
 							<stringvalue></stringvalue>
@@ -314,7 +425,7 @@
 						<longdesc>The machine name to proxy secure HTTP through.</longdesc>
 					</local_schema>
 				</entry>
-				<entry name="mode" mtime="1445313153" type="schema" stype="string" owner="gnome-vfs" gettext_domain="gnome-vfs-2.0">
+				<entry name="mode" mtime="1445313153" type="schema" stype="string" owner="gnome-vfs">
 					<local_schema locale="C" short_desc="Proxy configuration mode">
 						<default type="string">
 							<stringvalue>none</stringvalue>
@@ -325,7 +436,7 @@
 				</entry>
 			</dir>
 			<dir name="http_proxy">
-				<entry name="ignore_hosts" mtime="1445313153" type="schema" stype="list" owner="gnome-vfs" gettext_domain="gnome-vfs-2.0" list_type="string">
+				<entry name="ignore_hosts" mtime="1445313153" type="schema" stype="list" owner="gnome-vfs" list_type="string">
 					<local_schema locale="C" short_desc="Non-proxy hosts">
 						<default type="list" ltype="string">
 							<li type="string">
@@ -342,7 +453,7 @@
 	netmask (something like 192.168.0.0/24).</longdesc>
 					</local_schema>
 				</entry>
-				<entry name="authentication_password" mtime="1445313153" type="schema" stype="string" owner="gnome-vfs" gettext_domain="gnome-vfs-2.0">
+				<entry name="authentication_password" mtime="1445313153" type="schema" stype="string" owner="gnome-vfs">
 					<local_schema locale="C" short_desc="HTTP proxy password">
 						<default type="string">
 							<stringvalue></stringvalue>
@@ -350,7 +461,7 @@
 						<longdesc>Password to pass as authentication when doing HTTP proxying.</longdesc>
 					</local_schema>
 				</entry>
-				<entry name="authentication_user" mtime="1445313153" type="schema" stype="string" owner="gnome-vfs" gettext_domain="gnome-vfs-2.0">
+				<entry name="authentication_user" mtime="1445313153" type="schema" stype="string" owner="gnome-vfs">
 					<local_schema locale="C" short_desc="HTTP proxy username">
 						<default type="string">
 							<stringvalue></stringvalue>
@@ -358,7 +469,7 @@
 						<longdesc>User name to pass as authentication when doing HTTP proxying.</longdesc>
 					</local_schema>
 				</entry>
-				<entry name="use_authentication" mtime="1445313153" type="schema" stype="bool" owner="gnome-vfs" gettext_domain="gnome-vfs-2.0">
+				<entry name="use_authentication" mtime="1445313153" type="schema" stype="bool" owner="gnome-vfs">
 					<local_schema locale="C" short_desc="Authenticate proxy server connections">
 						<default type="bool" value="false"/>
 						<longdesc>If true, then connections to the proxy server require
@@ -367,14 +478,14 @@
         &quot;/system/http_proxy/authentication_password&quot;.</longdesc>
 					</local_schema>
 				</entry>
-				<entry name="port" mtime="1445313153" type="schema" stype="int" owner="gnome-vfs" gettext_domain="gnome-vfs-2.0">
+				<entry name="port" mtime="1445313153" type="schema" stype="int" owner="gnome-vfs">
 					<local_schema locale="C" short_desc="HTTP proxy port">
 						<default type="int" value="8080"/>
 						<longdesc>The port on the machine defined by &quot;/system/http_proxy/host&quot;
         that you proxy through.</longdesc>
 					</local_schema>
 				</entry>
-				<entry name="host" mtime="1445313153" type="schema" stype="string" owner="gnome-vfs" gettext_domain="gnome-vfs-2.0">
+				<entry name="host" mtime="1445313153" type="schema" stype="string" owner="gnome-vfs">
 					<local_schema locale="C" short_desc="HTTP proxy host name">
 						<default type="string">
 							<stringvalue></stringvalue>
@@ -382,7 +493,7 @@
 						<longdesc>The machine name to proxy HTTP through.</longdesc>
 					</local_schema>
 				</entry>
-				<entry name="use_http_proxy" mtime="1445313153" type="schema" stype="bool" owner="gnome-vfs" gettext_domain="gnome-vfs-2.0">
+				<entry name="use_http_proxy" mtime="1445313153" type="schema" stype="bool" owner="gnome-vfs">
 					<local_schema locale="C" short_desc="Use HTTP proxy">
 						<default type="bool" value="false"/>
 						<longdesc>Enables the proxy settings when accessing HTTP over the
@@ -391,7 +502,7 @@
 				</entry>
 			</dir>
 			<dir name="dns_sd">
-				<entry name="extra_domains" mtime="1445313153" type="schema" stype="string" owner="gnome-vfs" gettext_domain="gnome-vfs-2.0">
+				<entry name="extra_domains" mtime="1445313153" type="schema" stype="string" owner="gnome-vfs">
 					<local_schema locale="C" short_desc="Extra domains to look for DNS-SD services in">
 						<default type="string">
 							<stringvalue></stringvalue>
@@ -400,7 +511,7 @@
         visible in the &quot;network:///&quot; location.</longdesc>
 					</local_schema>
 				</entry>
-				<entry name="display_local" mtime="1445313153" type="schema" stype="string" owner="gnome-vfs" gettext_domain="gnome-vfs-2.0">
+				<entry name="display_local" mtime="1445313153" type="schema" stype="string" owner="gnome-vfs">
 					<local_schema locale="C" short_desc="How to display local DNS-SD service">
 						<default type="string">
 							<stringvalue>merged</stringvalue>
@@ -414,13 +525,13 @@
 			<dir name="gnome">
 				<dir name="url-handlers">
 					<dir name="h323">
-						<entry name="needs_terminal" mtime="1445313153" type="schema" stype="bool" owner="gnome" gettext_domain="gnome-vfs-2.0">
+						<entry name="needs_terminal" mtime="1445313153" type="schema" stype="bool" owner="gnome">
 							<local_schema locale="C" short_desc="Run the command in a terminal">
 								<default type="bool" value="false"/>
 								<longdesc>True if the command used to handle this type of URL should be run in a terminal.</longdesc>
 							</local_schema>
 						</entry>
-						<entry name="command" mtime="1445313153" type="schema" stype="string" owner="gnome" gettext_domain="gnome-vfs-2.0">
+						<entry name="command" mtime="1445313153" type="schema" stype="string" owner="gnome">
 							<local_schema locale="C" short_desc="The handler for &quot;h323&quot; URLs">
 								<default type="string">
 									<stringvalue>gnomemeeting -c %s</stringvalue>
@@ -428,7 +539,7 @@
 								<longdesc>The command used to handle &quot;h323&quot; URLs, if enabled.</longdesc>
 							</local_schema>
 						</entry>
-						<entry name="enabled" mtime="1445313153" type="schema" stype="bool" owner="gnome" gettext_domain="gnome-vfs-2.0">
+						<entry name="enabled" mtime="1445313153" type="schema" stype="bool" owner="gnome">
 							<local_schema locale="C" short_desc="Whether the specified command should handle &quot;h323&quot; URLs">
 								<default type="bool" value="true"/>
 								<longdesc>True if the command specified in the &quot;command&quot; key should handle &quot;h323&quot; URLs.</longdesc>
@@ -436,13 +547,13 @@
 						</entry>
 					</dir>
 					<dir name="callto">
-						<entry name="needs_terminal" mtime="1445313153" type="schema" stype="bool" owner="gnome" gettext_domain="gnome-vfs-2.0">
+						<entry name="needs_terminal" mtime="1445313153" type="schema" stype="bool" owner="gnome">
 							<local_schema locale="C" short_desc="Run the command in a terminal">
 								<default type="bool" value="false"/>
 								<longdesc>True if the command used to handle this type of URL should be run in a terminal.</longdesc>
 							</local_schema>
 						</entry>
-						<entry name="command" mtime="1445313153" type="schema" stype="string" owner="gnome" gettext_domain="gnome-vfs-2.0">
+						<entry name="command" mtime="1445313153" type="schema" stype="string" owner="gnome">
 							<local_schema locale="C" short_desc="The handler for &quot;callto&quot; URLs">
 								<default type="string">
 									<stringvalue>gnomemeeting -c %s</stringvalue>
@@ -450,7 +561,7 @@
 								<longdesc>The command used to handle &quot;callto&quot; URLs, if enabled.</longdesc>
 							</local_schema>
 						</entry>
-						<entry name="enabled" mtime="1445313153" type="schema" stype="bool" owner="gnome" gettext_domain="gnome-vfs-2.0">
+						<entry name="enabled" mtime="1445313153" type="schema" stype="bool" owner="gnome">
 							<local_schema locale="C" short_desc="Whether the specified command should handle &quot;callto&quot; URLs">
 								<default type="bool" value="true"/>
 								<longdesc>True if the command specified in the &quot;command&quot; key should handle &quot;callto&quot; URLs.</longdesc>
@@ -458,13 +569,13 @@
 						</entry>
 					</dir>
 					<dir name="aim">
-						<entry name="needs_terminal" mtime="1445313153" type="schema" stype="bool" owner="gnome" gettext_domain="gnome-vfs-2.0">
+						<entry name="needs_terminal" mtime="1445313153" type="schema" stype="bool" owner="gnome">
 							<local_schema locale="C" short_desc="Run the command in a terminal">
 								<default type="bool" value="false"/>
 								<longdesc>True if the command used to handle this type of URL should be run in a terminal.</longdesc>
 							</local_schema>
 						</entry>
-						<entry name="command" mtime="1445313153" type="schema" stype="string" owner="gnome" gettext_domain="gnome-vfs-2.0">
+						<entry name="command" mtime="1445313153" type="schema" stype="string" owner="gnome">
 							<local_schema locale="C" short_desc="The handler for &quot;aim&quot; URLs">
 								<default type="string">
 									<stringvalue>gaim-remote uri &quot;%s&quot;</stringvalue>
@@ -472,7 +583,7 @@
 								<longdesc>The command used to handle &quot;aim&quot; URLs, if enabled.</longdesc>
 							</local_schema>
 						</entry>
-						<entry name="enabled" mtime="1445313153" type="schema" stype="bool" owner="gnome" gettext_domain="gnome-vfs-2.0">
+						<entry name="enabled" mtime="1445313153" type="schema" stype="bool" owner="gnome">
 							<local_schema locale="C" short_desc="Whether the specified command should handle &quot;aim&quot; URLs">
 								<default type="bool" value="true"/>
 								<longdesc>True if the command specified in the &quot;command&quot; key should handle &quot;aim&quot; URLs.</longdesc>
@@ -480,13 +591,13 @@
 						</entry>
 					</dir>
 					<dir name="mailto">
-						<entry name="needs_terminal" mtime="1445313153" type="schema" stype="bool" owner="gnome" gettext_domain="gnome-vfs-2.0">
+						<entry name="needs_terminal" mtime="1445313153" type="schema" stype="bool" owner="gnome">
 							<local_schema locale="C" short_desc="Run the command in a terminal">
 								<default type="bool" value="false"/>
 								<longdesc>True if the command used to handle this type of URL should be run in a terminal.</longdesc>
 							</local_schema>
 						</entry>
-						<entry name="command" mtime="1445313153" type="schema" stype="string" owner="gnome" gettext_domain="gnome-vfs-2.0">
+						<entry name="command" mtime="1445313153" type="schema" stype="string" owner="gnome">
 							<local_schema locale="C" short_desc="The handler for &quot;mailto&quot; URLs">
 								<default type="string">
 									<stringvalue>evolution %s</stringvalue>
@@ -494,7 +605,7 @@
 								<longdesc>The command used to handle &quot;mailto&quot; URLs, if enabled.</longdesc>
 							</local_schema>
 						</entry>
-						<entry name="enabled" mtime="1445313153" type="schema" stype="bool" owner="gnome" gettext_domain="gnome-vfs-2.0">
+						<entry name="enabled" mtime="1445313153" type="schema" stype="bool" owner="gnome">
 							<local_schema locale="C" short_desc="Whether the specified command should handle &quot;mailto&quot; URLs">
 								<default type="bool" value="true"/>
 								<longdesc>True if the command specified in the &quot;command&quot; key should handle &quot;mailto&quot; URLs.</longdesc>
@@ -502,13 +613,13 @@
 						</entry>
 					</dir>
 					<dir name="https">
-						<entry name="needs_terminal" mtime="1445313153" type="schema" stype="bool" owner="gnome" gettext_domain="gnome-vfs-2.0">
+						<entry name="needs_terminal" mtime="1445313153" type="schema" stype="bool" owner="gnome">
 							<local_schema locale="C" short_desc="Run the command in a terminal">
 								<default type="bool" value="false"/>
 								<longdesc>True if the command used to handle this type of URL should be run in a terminal.</longdesc>
 							</local_schema>
 						</entry>
-						<entry name="command" mtime="1445313153" type="schema" stype="string" owner="gnome" gettext_domain="gnome-vfs-2.0">
+						<entry name="command" mtime="1445313153" type="schema" stype="string" owner="gnome">
 							<local_schema locale="C" short_desc="The handler for &quot;https&quot; URLs">
 								<default type="string">
 									<stringvalue>epiphany %s</stringvalue>
@@ -516,7 +627,7 @@
 								<longdesc>The command used to handle &quot;https&quot; URLs, if enabled.</longdesc>
 							</local_schema>
 						</entry>
-						<entry name="enabled" mtime="1445313153" type="schema" stype="bool" owner="gnome" gettext_domain="gnome-vfs-2.0">
+						<entry name="enabled" mtime="1445313153" type="schema" stype="bool" owner="gnome">
 							<local_schema locale="C" short_desc="Whether the specified command should handle &quot;https&quot; URLs">
 								<default type="bool" value="true"/>
 								<longdesc>True if the command specified in the &quot;command&quot; key should handle &quot;https&quot; URLs.</longdesc>
@@ -524,13 +635,13 @@
 						</entry>
 					</dir>
 					<dir name="http">
-						<entry name="needs_terminal" mtime="1445313153" type="schema" stype="bool" owner="gnome" gettext_domain="gnome-vfs-2.0">
+						<entry name="needs_terminal" mtime="1445313153" type="schema" stype="bool" owner="gnome">
 							<local_schema locale="C" short_desc="Run the command in a terminal">
 								<default type="bool" value="false"/>
 								<longdesc>True if the command used to handle this type of URL should be run in a terminal.</longdesc>
 							</local_schema>
 						</entry>
-						<entry name="command" mtime="1445313153" type="schema" stype="string" owner="gnome" gettext_domain="gnome-vfs-2.0">
+						<entry name="command" mtime="1445313153" type="schema" stype="string" owner="gnome">
 							<local_schema locale="C" short_desc="The handler for &quot;http&quot; URLs">
 								<default type="string">
 									<stringvalue>epiphany %s</stringvalue>
@@ -538,7 +649,7 @@
 								<longdesc>The command used to handle &quot;http&quot; URLs, if enabled.</longdesc>
 							</local_schema>
 						</entry>
-						<entry name="enabled" mtime="1445313153" type="schema" stype="bool" owner="gnome" gettext_domain="gnome-vfs-2.0">
+						<entry name="enabled" mtime="1445313153" type="schema" stype="bool" owner="gnome">
 							<local_schema locale="C" short_desc="Whether the specified command should handle &quot;http&quot; URLs">
 								<default type="bool" value="true"/>
 								<longdesc>True if the command specified in the &quot;command&quot; key should handle &quot;http&quot; URLs.</longdesc>
@@ -546,13 +657,13 @@
 						</entry>
 					</dir>
 					<dir name="man">
-						<entry name="needs_terminal" mtime="1445313153" type="schema" stype="bool" owner="gnome" gettext_domain="gnome-vfs-2.0">
+						<entry name="needs_terminal" mtime="1445313153" type="schema" stype="bool" owner="gnome">
 							<local_schema locale="C" short_desc="Run the command in a terminal">
 								<default type="bool" value="false"/>
 								<longdesc>True if the command used to handle this type of URL should be run in a terminal.</longdesc>
 							</local_schema>
 						</entry>
-						<entry name="command" mtime="1445313153" type="schema" stype="string" owner="gnome" gettext_domain="gnome-vfs-2.0">
+						<entry name="command" mtime="1445313153" type="schema" stype="string" owner="gnome">
 							<local_schema locale="C" short_desc="The handler for &quot;man&quot; URLs">
 								<default type="string">
 									<stringvalue>gnome-help &quot;%s&quot;</stringvalue>
@@ -560,7 +671,7 @@
 								<longdesc>The command used to handle &quot;man&quot; URLs, if enabled.</longdesc>
 							</local_schema>
 						</entry>
-						<entry name="enabled" mtime="1445313153" type="schema" stype="bool" owner="gnome" gettext_domain="gnome-vfs-2.0">
+						<entry name="enabled" mtime="1445313153" type="schema" stype="bool" owner="gnome">
 							<local_schema locale="C" short_desc="Whether the specified command should handle &quot;man&quot; URLs">
 								<default type="bool" value="true"/>
 								<longdesc>True if the command specified in the &quot;command&quot; key should handle &quot;man&quot; URLs.</longdesc>
@@ -568,13 +679,13 @@
 						</entry>
 					</dir>
 					<dir name="info">
-						<entry name="needs_terminal" mtime="1445313153" type="schema" stype="bool" owner="gnome" gettext_domain="gnome-vfs-2.0">
+						<entry name="needs_terminal" mtime="1445313153" type="schema" stype="bool" owner="gnome">
 							<local_schema locale="C" short_desc="Run the command in a terminal">
 								<default type="bool" value="false"/>
 								<longdesc>True if the command used to handle this type of URL should be run in a terminal.</longdesc>
 							</local_schema>
 						</entry>
-						<entry name="command" mtime="1445313153" type="schema" stype="string" owner="gnome" gettext_domain="gnome-vfs-2.0">
+						<entry name="command" mtime="1445313153" type="schema" stype="string" owner="gnome">
 							<local_schema locale="C" short_desc="The handler for &quot;info&quot; URLs">
 								<default type="string">
 									<stringvalue>gnome-help &quot;%s&quot;</stringvalue>
@@ -582,7 +693,7 @@
 								<longdesc>The command used to handle &quot;info&quot; URLs, if enabled.</longdesc>
 							</local_schema>
 						</entry>
-						<entry name="enabled" mtime="1445313153" type="schema" stype="bool" owner="gnome" gettext_domain="gnome-vfs-2.0">
+						<entry name="enabled" mtime="1445313153" type="schema" stype="bool" owner="gnome">
 							<local_schema locale="C" short_desc="Whether the specified command should handle &quot;info&quot; URLs">
 								<default type="bool" value="true"/>
 								<longdesc>True if the command specified in the &quot;command&quot; key should handle &quot;info&quot; URLs.</longdesc>
@@ -590,13 +701,13 @@
 						</entry>
 					</dir>
 					<dir name="ghelp">
-						<entry name="needs_terminal" mtime="1445313153" type="schema" stype="bool" owner="gnome" gettext_domain="gnome-vfs-2.0">
+						<entry name="needs_terminal" mtime="1445313153" type="schema" stype="bool" owner="gnome">
 							<local_schema locale="C" short_desc="Run the command in a terminal">
 								<default type="bool" value="false"/>
 								<longdesc>True if the command used to handle this type of URL should be run in a terminal.</longdesc>
 							</local_schema>
 						</entry>
-						<entry name="command" mtime="1445313153" type="schema" stype="string" owner="gnome" gettext_domain="gnome-vfs-2.0">
+						<entry name="command" mtime="1445313153" type="schema" stype="string" owner="gnome">
 							<local_schema locale="C" short_desc="The handler for &quot;ghelp&quot; URLs">
 								<default type="string">
 									<stringvalue>gnome-help &quot;%s&quot;</stringvalue>
@@ -604,7 +715,7 @@
 								<longdesc>The command used to handle &quot;ghelp&quot; URLs, if enabled.</longdesc>
 							</local_schema>
 						</entry>
-						<entry name="enabled" mtime="1445313153" type="schema" stype="bool" owner="gnome" gettext_domain="gnome-vfs-2.0">
+						<entry name="enabled" mtime="1445313153" type="schema" stype="bool" owner="gnome">
 							<local_schema locale="C" short_desc="Whether the specified command should handle &quot;ghelp&quot; URLs">
 								<default type="bool" value="true"/>
 								<longdesc>True if the command specified in the &quot;command&quot; key should handle &quot;ghelp&quot; URLs.</longdesc>
@@ -612,13 +723,13 @@
 						</entry>
 					</dir>
 					<dir name="trash">
-						<entry name="needs_terminal" mtime="1445313153" type="schema" stype="bool" owner="gnome" gettext_domain="gnome-vfs-2.0">
+						<entry name="needs_terminal" mtime="1445313153" type="schema" stype="bool" owner="gnome">
 							<local_schema locale="C" short_desc="Run the command in a terminal">
 								<default type="bool" value="false"/>
 								<longdesc>True if the command used to handle this type of URL should be run in a terminal.</longdesc>
 							</local_schema>
 						</entry>
-						<entry name="command" mtime="1445313153" type="schema" stype="string" owner="gnome" gettext_domain="gnome-vfs-2.0">
+						<entry name="command" mtime="1445313153" type="schema" stype="string" owner="gnome">
 							<local_schema locale="C" short_desc="The handler for &quot;trash&quot; URLs">
 								<default type="string">
 									<stringvalue>nautilus &quot;%s&quot;</stringvalue>
@@ -626,7 +737,7 @@
 								<longdesc>The command used to handle &quot;trash&quot; URLs, if enabled.</longdesc>
 							</local_schema>
 						</entry>
-						<entry name="enabled" mtime="1445313153" type="schema" stype="bool" owner="gnome" gettext_domain="gnome-vfs-2.0">
+						<entry name="enabled" mtime="1445313153" type="schema" stype="bool" owner="gnome">
 							<local_schema locale="C" short_desc="Whether the specified command should handle &quot;trash&quot; URLs">
 								<default type="bool" value="true"/>
 								<longdesc>True if the command specified in the &quot;command&quot; key should handle &quot;trash&quot; URLs.</longdesc>
@@ -1290,7 +1401,7 @@ X-Generator: Virtaal 0.5.2
 				</dir>
 				<dir name="applications">
 					<dir name="component_viewer">
-						<entry name="exec" mtime="1445313153" type="schema" stype="string" owner="gnome-vfs" gettext_domain="gnome-vfs-2.0">
+						<entry name="exec" mtime="1445313153" type="schema" stype="string" owner="gnome-vfs">
 							<local_schema locale="C" short_desc="Default component viewer application">
 								<default type="string">
 									<stringvalue>nautilus %s</stringvalue>
@@ -1334,7 +1445,7 @@ X-Generator: Virtaal 0.5.2
 						</entry>
 					</dir>
 					<dir name="terminal">
-						<entry name="exec_arg" mtime="1445313153" type="schema" stype="string" owner="gnome-vfs" gettext_domain="gnome-vfs-2.0">
+						<entry name="exec_arg" mtime="1445313153" type="schema" stype="string" owner="gnome-vfs">
 							<local_schema locale="C" short_desc="Exec argument for default terminal">
 								<default type="string">
 									<stringvalue>-x</stringvalue>
@@ -1342,7 +1453,7 @@ X-Generator: Virtaal 0.5.2
 								<longdesc>The exec argument to use for the default terminal application.</longdesc>
 							</local_schema>
 						</entry>
-						<entry name="exec" mtime="1445313153" type="schema" stype="string" owner="gnome-vfs" gettext_domain="gnome-vfs-2.0">
+						<entry name="exec" mtime="1445313153" type="schema" stype="string" owner="gnome-vfs">
 							<local_schema locale="C" short_desc="Default terminal application">
 								<default type="string">
 									<stringvalue>gnome-terminal</stringvalue>

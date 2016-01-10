@@ -1,9 +1,0 @@
-[KNewStuff2]
-ProvidersUrl=https://kdenlive.org/data/rendersources.xml
-TargetDir=kdenlive/export
-Uncompress=archive
-
-[KNewStuff3]
-ProvidersUrl=https://kdenlive.org/data/rendersources.xml
-TargetDir=kdenlive/export
-Uncompress=archive

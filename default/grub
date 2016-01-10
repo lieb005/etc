@@ -20,7 +20,7 @@ GRUB_HIDDEN_TIMEOUT_QUIET=true
 GRUB_TIMEOUT=3
 
 # Append parameters to the linux kernel command line
-GRUB_CMDLINE_LINUX="rootfstype=ext4"
+GRUB_CMDLINE_LINUX="crashkernel=256M"
 #GRUB_CMDLINE_LINUX=""
 #
 # Examples:

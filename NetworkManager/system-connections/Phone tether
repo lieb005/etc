@@ -1,11 +1,13 @@
 [connection]
-id=Phone tether
+id=Phone Tether
 uuid=9e4fc707-2606-4850-9603-ca56d73586a6
 type=ethernet
-permissions=user:mark:;
+permissions=user:root:;
 secondaries=
+timestamp=1450246376
 
 [ethernet]
+duplex=full
 mac-address=02:56:51:57:34:33
 mac-address-blacklist=
 
@@ -15,4 +17,5 @@ method=auto
 
 [ipv6]
 dns-search=
+ip6-privacy=0
 method=auto

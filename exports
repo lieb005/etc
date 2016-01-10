@@ -10,3 +10,5 @@
 #  /srv/nfs4/home   *(rw,sync,sec=krb5i,nohide)
 #
 # Use `exportfs -arv` to reload.
+
+/srv/home *(rw,sync,nohide)

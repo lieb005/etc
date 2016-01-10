@@ -75,9 +75,11 @@ load-module module-bluetooth-discover
 .endif
 
 ### Load several protocols
+.nofail
 .ifexists module-esound-protocol-unix.so
 load-module module-esound-protocol-unix
 .endif
+.fail
 load-module module-native-protocol-unix
 
 ### Network access (may be configured with paprefs, so leave this commented
